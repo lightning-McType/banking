@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 
 const setupDB = () => {
   try {
-    mongoose.connect(process.env.DB, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    mongoose.connect(
+      "mongodb+srv://samsepi0l:pa55word@cluster0.qjkt8fk.mongodb.net/?retryWrites=true&w=majority",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
     console.log("Connected to database successfully");
   } catch (err) {
     console.log(err);
